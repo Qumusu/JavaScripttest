@@ -5,27 +5,19 @@
     
     </head>
     <body>
-        <p id="text">Hello World!</p>
-        <button id = "myButton">Change Text!</button>
+        <p><input type="text" id="inputForm">ここに名前を入力してください</p>
+        <button id = "submitButton">送信する</button>
+        
+        <p id="newMessage"></p>
                 
         <script type="text/javascript">
-            document.getElementById("myButton").onclick = function(){
-                // alert("ボタンがクリックされました！");
-                document.getElementById("text").innerHTML = "クリックしました！"
+            document.getElementById("submitButton").onclick = function(){
+                var name = "";
+                name = document.getElementById("inputForm").value;
+                document.getElementById("newMessage").innerHTML = name + "さん、以下が申し込み内容になります。"
             }
             
         </script>
         
-        <p id="secondParagraph">JavaScriptは、</p>
-        <button id="secondButton">追記する！</button>
-        <script type="text/javascript">
-            document.getElementById("secondButton").onclick = function(){
-                /*document.getElementById("secondParagraph").innerHTML = 
-                    document.getElementById("secondParagraph").innerHTML = "ブラウザでもサーバーサイドでも動作するプログラミング言語です";
-                */
-                // 文字列を追記する。appendする。
-                document.getElementById("secondParagraph").innerHTML += "ブラウザでもサーバーサイドでも動作するプログラミング言語です";
-            }
-        </script>
     </body>
 </html>
